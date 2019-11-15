@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4a01165-1306-41ec-aeae-127cc9e64f32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/asyncFunctions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LogInForm/LogInForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LogInForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CenteredContainer/CenteredContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CenteredContainer/CenteredContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CenteredContainer/useStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CenteredContainer/useStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/useFormStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/useFormStyles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/LogInForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LogInForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/asyncFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/asyncFunctions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/reducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,24 +36,25 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$USER_HOME$/.nvm/versions/node/v8.9.1/lib/node_modules/prettier" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/utils" />
-      <recent name="$PROJECT_DIR$/src/components/Loader" />
-      <recent name="$PROJECT_DIR$/src/components/Form" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/containers" />
       <recent name="$PROJECT_DIR$/src/components/CenteredContainer" />
       <recent name="$PROJECT_DIR$/src/components/MainContainer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/utils" />
+      <recent name="$PROJECT_DIR$/src/components/Loader" />
+      <recent name="$PROJECT_DIR$/src/components/Form" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -94,7 +102,9 @@
       <workItem from="1573724143165" duration="584000" />
       <workItem from="1573736020692" duration="1607000" />
       <workItem from="1573749197095" duration="907000" />
-      <workItem from="1573807313958" duration="3059000" />
+      <workItem from="1573807313958" duration="3299000" />
+      <workItem from="1573822215757" duration="1095000" />
+      <workItem from="1573826688112" duration="3844000" />
     </task>
     <servers />
   </component>

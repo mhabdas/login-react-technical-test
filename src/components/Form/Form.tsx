@@ -1,11 +1,16 @@
-import React from "react";
-import { ErrorMessage, Form, Formik } from "formik";
+import React, {FunctionComponent} from "react";
+import {ErrorMessage, Form, Formik, FormikProps} from "formik";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { useFormStyles } from "./useFormStyles";
 
-const FormTemplate = props => {
+type FormProps = {
+  successMessage?: string,
+  errorMessage?: string,
+};
+
+const FormTemplate: FunctionComponent<FormikProps> = (props: FormProps & FormikProps<FormValues>) => {
   const {
     initialValues,
     fields,

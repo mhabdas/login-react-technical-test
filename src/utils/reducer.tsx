@@ -1,27 +1,28 @@
-import React, { useReducer } from "react";
-import {CATCH_ERROR, LOG_IN, INIT_LOGGING} from "./constants";
+import React, { FunctionComponent, useReducer } from "react";
+import { CATCH_ERROR, LOG_IN, INIT_LOGGING } from "./constants";
+import { AuthState, AuthActionTypes, ReducerProps } from "./types";
 
-const initialState = {
+const initialState: AuthState = {
   data: null,
   isLoading: false,
   isError: false
 };
 
-const authReducer = (state, action) => {
+const authReducer = (state: AuthState, action: AuthActionTypes) => {
   switch (action.type) {
     case INIT_LOGGING:
       return {
         ...state,
         isLoading: true,
         isError: false,
-        data: null,
+        data: null
       };
     case CATCH_ERROR:
       return {
         ...state,
         isLoading: false,
         isError: true,
-        data: null,
+        data: null
       };
     case LOG_IN:
       return {
@@ -36,7 +37,7 @@ const authReducer = (state, action) => {
 };
 
 const ReducerContext = React.createContext(initialState);
-const ReducerProvider = props => {
+const ReducerProvider: FunctionComponent<ReducerProps> = props => {
   const [state, dispatch] = useReducer(authReducer, initialState);
   const { children } = props;
   return (
