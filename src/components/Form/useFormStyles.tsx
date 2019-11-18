@@ -9,19 +9,19 @@ export const useFormStyles = makeStyles(theme => ({
     flexDirection: "column",
     borderRadius: "5px",
     "& input": {
-      padding: "1rem",
+      padding: "1rem"
     },
     "& button": {
       margin: "1rem",
-      fontWeight: 'bold',
+      fontWeight: "bold"
     },
     "& .MuiInput-underline:after": {
-      borderBottomColor: theme.palette.secondary.main,
+      borderBottomColor: theme.palette.secondary.main
     }
   },
   error: {
-    paddingTop: '0.5rem',
+    paddingTop: "0.5rem",
     color: theme.palette.primary.contrastText,
-    fontSize: '0.75rem'
+    fontSize: "0.75rem"
   }
 }));

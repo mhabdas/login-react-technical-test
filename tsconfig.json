@@ -5,14 +5,29 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es6",
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "lib": [
-      "dom", "es6"
+      "dom",
+      "es6"
     ],
-    "types": ["@material-ui/core", "formik"]
-  }
+    "types": [
+      "@material-ui/core",
+      "formik"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": [
+    "src"
+  ]
 }

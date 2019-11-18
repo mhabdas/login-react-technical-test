@@ -12,17 +12,7 @@ export const logIn = async (
 ) => {
   dispatch(initLogging());
   try {
-    await axios({
-      method: "PUT",
-      mode: "no-cors",
-      url: apiURLs[Math.floor(Math.random() * apiURLs.length)],
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      data
-    });
+    await axios.put(apiURLs[Math.floor(Math.random() * apiURLs.length)], data);
     dispatch(logInAction(data));
   } catch (error) {
     dispatch(catchError(error));

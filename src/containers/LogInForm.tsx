@@ -1,11 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useReducer } from "react";
 import * as yup from "yup";
 import FormTemplate from "../components/Form/Form";
-import { ReducerContext } from "../utils/reducer";
+import { authReducer, initialState } from "../utils/reducer";
 import { logIn } from "../utils/asyncFunctions";
 import Loader from "../components/Loader/Loader";
+import { AuthData } from "../utils/types";
 
-const logInSchema = yup.object().shape({
+export const logInSchema = yup.object().shape({
   password: yup
     .string()
     .min(5, "Your password is too short!")
@@ -16,8 +17,8 @@ const logInSchema = yup.object().shape({
     .required("This field is required!")
 });
 
-const LogInForm = props => {
-  const { state, dispatch } = useContext(ReducerContext);
+const LogInForm = () => {
+  const [state, dispatch] = useReducer(authReducer, initialState);
   const [initialValues] = useState({
     email: "",
     password: ""
@@ -33,10 +34,8 @@ const LogInForm = props => {
     }
   ];
 
-  const onSubmit = values => {
-    logIn(dispatch, values).then(response => {
-      console.log(response);
-    });
+  const onSubmit = (values: AuthData) => {
+    logIn(dispatch, values);
   };
 
   return state.isLoading ? (
@@ -47,9 +46,12 @@ const LogInForm = props => {
       fields={fieldsConfig}
       validationSchema={logInSchema}
       onSubmit={onSubmit}
-      successMessage={state.data && `User ${state.data.email} is logged in!`}
-      errorMessage={state.isError && `Sorry! Your credentials are incorrect.`}
-      {...props}
+      successMessage={
+        state.data ? `User ${state.data.email} is logged in!` : undefined
+      }
+      errorMessage={
+        state.isError ? `Sorry! Your credentials are incorrect.` : undefined
+      }
     />
   );
 };

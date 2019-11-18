@@ -1,16 +1,13 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import LogInForm from "./containers/LogInForm";
 import CenteredContainer from "./components/CenteredContainer/CenteredContainer";
-import { ThemeProvider } from "@material-ui/styles";
+import { ThemeProvider } from "@material-ui/core/styles";
 import { theme } from "./utils/theme";
-import {ReducerProvider} from "./utils/reducer";
 
-const App = () => (
+const App: FunctionComponent = () => (
   <ThemeProvider theme={theme}>
     <CenteredContainer>
-      <ReducerProvider>
-        <LogInForm />
-      </ReducerProvider>
+      <LogInForm />
     </CenteredContainer>
   </ThemeProvider>
 );

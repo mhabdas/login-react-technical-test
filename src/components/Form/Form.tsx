@@ -1,16 +1,21 @@
-import React, {FunctionComponent} from "react";
-import {ErrorMessage, Form, Formik, FormikProps} from "formik";
+import React, { FunctionComponent } from "react";
+import { ErrorMessage, Form, Formik } from "formik";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { useFormStyles } from "./useFormStyles";
+import { FormValues, FormFields, ValidationSchema } from "./types";
 
 type FormProps = {
-  successMessage?: string,
-  errorMessage?: string,
+  successMessage?: string;
+  errorMessage?: string;
+  initialValues: FormValues;
+  fields: FormFields[];
+  validationSchema: ValidationSchema;
+  onSubmit: Function;
 };
 
-const FormTemplate: FunctionComponent<FormikProps> = (props: FormProps & FormikProps<FormValues>) => {
+const FormTemplate: FunctionComponent<FormProps> = props => {
   const {
     initialValues,
     fields,
@@ -35,14 +40,10 @@ const FormTemplate: FunctionComponent<FormikProps> = (props: FormProps & FormikP
           <Form className={classes.form}>
             {fields.map(field => (
               <React.Fragment key={`${field.id}fragment`}>
-                <label key={`${field.id}label`} htmlFor={field.name}>
-                  {field.label}
-                </label>
                 <TextField
                   key={field.id}
                   type={field.type}
                   name={field.name}
-                  component={field.component}
                   placeholder={field.placeholder}
                   value={values[field.name]}
                   onChange={handleChange}
